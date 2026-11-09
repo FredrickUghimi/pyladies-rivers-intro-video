@@ -6,5 +6,8 @@
   "S4": "Through our structured Python mentorship programme, we guide learners from the fundamentals of programming to practical exercises and assignments. We make learning accessible, interactive and supportive, especially for beginners.",
   "S5": "We are growing beyond online learning, with hands-on experiences and stronger community connections. We are excited about our upcoming in-person Python workshop in Port Harcourt, planned for February 2027.",
   "S5_PSF": "We are growing beyond online learning, with hands-on experiences and stronger community connections. We are excited about our upcoming in-person Python workshop in Port Harcourt, supported by the Python Software Foundation.",
-  "S6": "Whether you are just starting or growing your skills, there is a place for you here. One line of Python at a time, we are creating opportunities for women in technology. We are PyLadies Rivers!"
+  "S6": "Whether you are just starting or growing your skills, there is a place for you here. One line of Python at a time, we are creating opportunities for women in technology. We are PyLadies Rivers!",
+  "pronunciation": {
+    "PyLadies": "Pie Ladies"
+  }
 }

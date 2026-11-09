@@ -99,10 +99,38 @@ def _():
 @check("no forbidden assets (flyers, posters, watermarked images, stock footage)")
 def _():
     files = [os.path.relpath(os.path.join(d, f), f"{ROOT}/public") for d, _, fs in os.walk(f"{ROOT}/public") for f in fs]
-    allowed = lambda f: f == "img/logo.png" or re.fullmatch(r"audio/(S[1-6]|voiceover)\.(wav|mp3|words\.json)", f) or f.startswith("audio/parts/")
+    allowed = lambda f: f in ("img/logo.png", "img/fredrick.png") or re.fullmatch(r"audio/(S[1-6]|voiceover)\.(wav|mp3|words\.json)", f) or f.startswith("audio/parts/")
     stray = [f for f in files if not allowed(f)]
     toks = re.findall(r"_do-not-use|WA0007|flyer|poster|tiktok|code\.architect|stock footage|pexels|unsplash|shutterstock|\.mp4|assets/photos", SRC, re.I)
     return not stray and not toks, f"public files={len(files)} stray={stray} forbidden_tokens={toks}"
+
+@check("S3 portrait: approved avatar only, crimson ring, <=480px, never upscaled, no overlap, never called a photo")
+def _():
+    from PIL import ImageFont
+    av = Image.open(f"{ROOT}/public/img/fredrick.png"); src = Image.open(f"{ROOT}/assets/people/fredrick.jpg").convert("RGB")
+    cx, cy, r = 540, 541, 503
+    same = np.array_equal(np.asarray(av.convert("RGB"))[r - 50:r + 50, r - 50:r + 50], np.asarray(src.crop((cx - 50, cy - 50, cx + 50, cy + 50))))  # uniform crop: centre pixels identical
+    rim = np.asarray(av)[:, :, 3]; corner_clear = rim[0, 0] == 0 and rim[-1, -1] == 0
+    disp = int(re.search(r"display: (\d+)", cfg).group(1)); native = av.size[0]
+    s3 = R("src/scenes/S3.tsx") + R("src/data/organizers.ts")
+    ring_ok = "background: BRAND.red" in s3 and 'red: "#EC1F3D"' in cfg
+    dirs_ok = sorted(os.listdir(f"{ROOT}/assets/logo")) == ["pyladies-rivers.jpg"] and sorted(os.listdir(f"{ROOT}/assets/people")) == ["fredrick.jpg"]
+    no_photo_word = not re.search(r"photo", s3 + "".join(c["scene"] for c in CAPS) + "".join(w["text"] for c in CAPS for w in c["words"]), re.I)
+    font = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", 80) if os.path.exists("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf") else ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-Bold.otf", 80)
+    text_w = font.getlength("Fredrick Ughimi"); room = 1400 - 2 * 64 - 64 - disp
+    ok = same and corner_clear and disp <= 480 and disp < native and ring_ok and dirs_ok and no_photo_word and text_w <= room - 8
+    return bool(ok), f"crop_uniform={same} corners_transparent={corner_clear} display={disp}px native={native}px ring_crimson={ring_ok} logo_dir_only_logo={dirs_ok} no_'photo'_text={no_photo_word} name_width={text_w:.0f}px of {room}px"
+
+@check("pronunciation: TTS says 'Pie Ladies'; captions, on-screen text and .srt keep 'PyLadies'")
+def _():
+    pr = N.get("pronunciation", {}); ok = pr == {"PyLadies": "Pie Ladies"}
+    for k in ("S1", "S3", "S6"):
+        ok &= "Pie Ladies" in T[k]["spoken"] and "PyLadies" in T[k]["text"] and "Pie" not in T[k]["text"]
+    screen = R("deliverables/PyLadies-Rivers-Intro.srt") + json.dumps(CAPS) + SRC
+    ok &= not re.search(r"Pie Ladies|\bPie\b", screen)
+    n_cap = sum(w["text"].startswith("PyLadies") for c in CAPS for w in c["words"]); n_txt = sum(T[k]["text"].count("PyLadies") for k in SLOTS)
+    ok &= n_cap == n_txt == 3
+    return bool(ok), f"spoken_respelled_scenes=S1,S3,S6 caption_tokens={n_cap} narration_mentions={n_txt}; 'Pie' absent from srt/captions/source"
 
 @check("S4 code demos are verbatim from assets/curriculum/PyLadies_Rivers_Curriculum.md")
 def _():

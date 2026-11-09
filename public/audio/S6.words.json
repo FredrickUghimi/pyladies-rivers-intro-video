@@ -188,25 +188,25 @@
  {
   "text": "We",
   "start": 11.356,
-  "end": 11.506,
+  "end": 11.4935,
   "sentence": 2
  },
  {
   "text": "are",
   "start": 11.556,
-  "end": 11.6685,
+  "end": 11.656,
   "sentence": 2
  },
  {
   "text": "PyLadies",
-  "start": 11.756,
-  "end": 12.406,
+  "start": 11.731,
+  "end": 12.281,
   "sentence": 2
  },
  {
   "text": "Rivers!",
-  "start": 12.431,
-  "end": 12.931,
+  "start": 12.306,
+  "end": 12.806,
   "sentence": 2
  }
 ]

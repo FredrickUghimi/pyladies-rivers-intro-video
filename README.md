@@ -12,7 +12,7 @@ A 90-second, faceless chapter introduction video for **PyLadiesCon 2026**, built
 - [x] TTS per-scene timing pass (`scripts/tts.py`, results in `config/timings.json`)
 - [x] Scenes built (S1 to S6)
 - [x] Subtitles burned in and exported (`deliverables/PyLadies-Rivers-Intro.srt`)
-- [x] Low-res 90s preview rendered, verification 11/11 on the preview
+- [x] Low-res 90s preview rendered, verification 13/13 on the preview
 - [ ] Verification checklist passed on the final MP4
 - [ ] Final MP4 rendered (waiting for approval of the preview)
 
@@ -76,11 +76,14 @@ assets/
   logo/        pyladies-rivers.jpg
   curriculum/  PyLadies_Rivers_Curriculum.md
   photos/      cleared pilot-cohort photos + CONSENT.md
+  people/      fredrick.jpg: AI-stylised avatar of the lead organizer (approved person image; not a photograph)
   _do-not-use/ forbidden promo poster, kept out of the build
 ```
 
 Rules:
 
+- **Pronunciation:** the voice is given "Pie Ladies" for "PyLadies" (`pronunciation` in `config/narration.json`, TTS input only). Captions, on-screen text and the `.srt` keep "PyLadies".
+- **Portrait (S3):** `assets/people/fredrick.jpg` is an AI-stylised avatar, never called a photo. It is cropped to the circle just inside its white ring (no distortion), framed in the brand crimson ring, shown at 400px (limit 480px, never upscaled). It is the only approved person image.
 - **Logo:** crop margins only. Never recolour, stretch, redraw or cut out the background. Scenes 1 and 6 use a white or off-white background so it sits natively. Accent colours are sampled from the logo.
 - **One brand identity only.** Promo flyers, posters, and anything with a TikTok watermark or creator handle are not used.
 - **Photos:** only those marked "cleared" in `assets/photos/CONSENT.md`. Captioned "Our pilot cohort". No stock footage and no AI-generated imagery presented as real people.

@@ -11,7 +11,7 @@ comes a community passionate about opening
 doors for women in technology.
 
 4
-00:00:09,408 --> 00:00:11,333
+00:00:09,408 --> 00:00:11,208
 We are PyLadies Rivers.
 
 5
@@ -31,19 +31,19 @@ develop practical Python skills,
 and build confidence in technology.
 
 9
-00:00:27,600 --> 00:00:30,175
+00:00:27,600 --> 00:00:30,163
 Led by our chapter organizer and mentor,
 
 10
-00:00:30,175 --> 00:00:32,987
+00:00:30,163 --> 00:00:32,812
 Fredrick Ughimi, PyLadies Rivers is building
 
 11
-00:00:32,987 --> 00:00:36,000
+00:00:32,812 --> 00:00:35,775
 a welcoming environment where learners can grow together,
 
 12
-00:00:36,000 --> 00:00:38,050
+00:00:35,775 --> 00:00:37,800
 share knowledge and support one another.
 
 13
@@ -107,6 +107,6 @@ One line of Python at a time,
 we are creating opportunities for women in technology.
 
 28
-00:01:25,356 --> 00:01:27,281
+00:01:25,356 --> 00:01:27,156
 We are PyLadies Rivers!
 

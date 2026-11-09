@@ -1,44 +1,50 @@
 {
  "S1": {
-  "seconds": 11.1,
+  "seconds": 10.98,
   "sentences": 2,
   "words_timed": 21,
   "words_in_text": 21,
-  "text": "From Port Harcourt, Rivers State, Nigeria, comes a community passionate about opening doors for women in technology. We are PyLadies Rivers."
+  "text": "From Port Harcourt, Rivers State, Nigeria, comes a community passionate about opening doors for women in technology. We are PyLadies Rivers.",
+  "spoken": "From Port Harcourt, Rivers State, Nigeria, comes a community passionate about opening doors for women in technology. We are Pie Ladies Rivers."
  },
  "S2": {
   "seconds": 10.848,
   "sentences": 1,
   "words_timed": 22,
   "words_in_text": 22,
-  "text": "Our mission is simple: to encourage, support and empower women to explore programming, develop practical Python skills, and build confidence in technology."
+  "text": "Our mission is simple: to encourage, support and empower women to explore programming, develop practical Python skills, and build confidence in technology.",
+  "spoken": "Our mission is simple: to encourage, support and empower women to explore programming, develop practical Python skills, and build confidence in technology."
  },
  "S3": {
-  "seconds": 11.136,
+  "seconds": 10.896,
   "sentences": 1,
   "words_timed": 27,
   "words_in_text": 27,
-  "text": "Led by our chapter organizer and mentor, Fredrick Ughimi, PyLadies Rivers is building a welcoming environment where learners can grow together, share knowledge and support one another."
+  "text": "Led by our chapter organizer and mentor, Fredrick Ughimi, PyLadies Rivers is building a welcoming environment where learners can grow together, share knowledge and support one another.",
+  "spoken": "Led by our chapter organizer and mentor, Fredrick Ughimi, Pie Ladies Rivers is building a welcoming environment where learners can grow together, share knowledge and support one another."
  },
  "S4": {
   "seconds": 14.532,
   "sentences": 2,
   "words_timed": 29,
   "words_in_text": 29,
-  "text": "Through our structured Python mentorship programme, we guide learners from the fundamentals of programming to practical exercises and assignments. We make learning accessible, interactive and supportive, especially for beginners."
+  "text": "Through our structured Python mentorship programme, we guide learners from the fundamentals of programming to practical exercises and assignments. We make learning accessible, interactive and supportive, especially for beginners.",
+  "spoken": "Through our structured Python mentorship programme, we guide learners from the fundamentals of programming to practical exercises and assignments. We make learning accessible, interactive and supportive, especially for beginners."
  },
  "S5": {
   "seconds": 14.076,
   "sentences": 2,
   "words_timed": 29,
   "words_in_text": 29,
-  "text": "We are growing beyond online learning, with hands-on experiences and stronger community connections. We are excited about our upcoming in-person Python workshop in Port Harcourt, planned for February 2027."
+  "text": "We are growing beyond online learning, with hands-on experiences and stronger community connections. We are excited about our upcoming in-person Python workshop in Port Harcourt, planned for February 2027.",
+  "spoken": "We are growing beyond online learning, with hands-on experiences and stronger community connections. We are excited about our upcoming in-person Python workshop in Port Harcourt, planned for February 2027."
  },
  "S6": {
-  "seconds": 13.848,
+  "seconds": 13.752,
   "sentences": 3,
   "words_timed": 35,
   "words_in_text": 35,
-  "text": "Whether you are just starting or growing your skills, there is a place for you here. One line of Python at a time, we are creating opportunities for women in technology. We are PyLadies Rivers!"
+  "text": "Whether you are just starting or growing your skills, there is a place for you here. One line of Python at a time, we are creating opportunities for women in technology. We are PyLadies Rivers!",
+  "spoken": "Whether you are just starting or growing your skills, there is a place for you here. One line of Python at a time, we are creating opportunities for women in technology. We are Pie Ladies Rivers!"
  }
 }

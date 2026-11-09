@@ -44,6 +44,9 @@ export const BRAND = {
 // Logo: margin-cropped from assets/logo/pyladies-rivers.jpg, pixels untouched.
 export const LOGO = { src: "img/logo.png", width: 660, height: 638 };
 
+// S3 portrait: an AI-stylised avatar (not a photograph). Native 1006px crop; shown at 400px, never upscaled (limit 480).
+export const PORTRAIT = { src: "img/fredrick.png", native: 1006, display: 400 };
+
 export const URLS = {
   site: "https://pyladies-rivers.github.io/website/",
   workshop: "pyladies-rivers.github.io/website/#workshop",

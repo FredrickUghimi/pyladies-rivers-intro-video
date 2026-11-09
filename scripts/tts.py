@@ -12,6 +12,10 @@ A = f"{ROOT}/public/audio"; P = f"{A}/parts"
 N = json.load(open(f"{ROOT}/config/narration.json"))
 F = json.load(open(f"{ROOT}/config/flags.json"))
 VOICE, RATE, PITCH, PAUSE = N["voice"], "+0%", "+0Hz", 0.3
+PRON = N.get("pronunciation", {})  # respelling applies to the TTS input only; captions keep the original text
+def spoken_text(t):
+    for k, v in PRON.items(): t = t.replace(k, v)
+    return t
 assert VOICE == "en-NG-EzinneNeural", "voice must not be changed"
 os.makedirs(P, exist_ok=True)
 def run(*a): subprocess.check_call(list(a), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -33,6 +37,15 @@ def align(tokens, bounds):
             out.append({"text": g, "start": a, "end": e}); a = e
     assert ti == len(tokens), "tokens left over"
     return out
+def fold(cap_tokens, spoken_aligned):
+    """Caption token -> time span. A respelled token (e.g. 'PyLadies' -> 'Pie Ladies') spans several spoken words:
+    start of the first spoken word to end of the last."""
+    out, i = [], 0
+    for tok in cap_tokens:
+        k = len(spoken_text(tok).split()); grp = spoken_aligned[i:i+k]; i += k
+        out.append({"text": tok, "start": grp[0]["start"], "end": grp[-1]["end"]})
+    assert i == len(spoken_aligned), "spoken/caption token mismatch"
+    return out
 async def clip(path, text):
     c = edge_tts.Communicate(text, VOICE, rate=RATE, pitch=PITCH, boundary="WordBoundary")
     words = []
@@ -49,7 +62,8 @@ async def scene(key, text):
     ss = sentences(text)
     for i, s in enumerate(ss):
         mp3 = f"{P}/{key}_{i}.mp3"; wav = f"{P}/{key}_{i}.wav"
-        w = align(s.split(), await clip(mp3, s))
+        sp = spoken_text(s)
+        w = fold(s.split(), align(sp.split(), await clip(mp3, sp)))
         run("ffmpeg","-y","-i",mp3,"-ar","24000","-ac","1",wav)   # decode only; no tempo change
         d = dur(wav)
         words += [{"text": x["text"], "start": round(t+x["start"],4), "end": round(t+x["end"],4), "sentence": i} for x in w]
@@ -64,7 +78,7 @@ async def scene(key, text):
     run("ffmpeg","-y","-i",out,"-codec:a","libmp3lame","-q:a","2",f"{A}/{key}.mp3")
     json.dump(words, open(f"{A}/{key}.words.json","w"), indent=1)
     n_tok = len(text.split())
-    return {"seconds": round(dur(out),3), "sentences": len(ss), "words_timed": len(words), "words_in_text": n_tok, "text": text}
+    return {"seconds": round(dur(out),3), "sentences": len(ss), "words_timed": len(words), "words_in_text": n_tok, "text": text, "spoken": spoken_text(text)}
 async def main():
     res = {}
     for i in range(1, 7):

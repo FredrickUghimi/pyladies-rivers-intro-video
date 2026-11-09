@@ -17,6 +17,15 @@ logo.save(f"{ROOT}/public/img/logo.png")
 lw, lh = re.search(r"width: (\d+), height: (\d+)", cfg).groups()
 assert logo.size == (int(lw), int(lh)), f"LOGO in scenes.config.ts must be {logo.size}"
 
+# 1b. Portrait (AI-stylised avatar, approved person image): crop to the circle just inside the white ring; uniform crop, no resize or distortion.
+from PIL import ImageDraw
+PC = (540, 541, 503)  # centre x, centre y, radius (measured inside the ring)
+av = Image.open(f"{ROOT}/assets/people/fredrick.jpg").convert("RGB")
+cx, cy, rr = PC
+av = av.crop((cx - rr, cy - rr, cx + rr, cy + rr)).convert("RGBA")
+mk = Image.new("L", (2 * rr * 4, 2 * rr * 4), 0); ImageDraw.Draw(mk).ellipse((0, 0, 2 * rr * 4 - 1, 2 * rr * 4 - 1), fill=255)
+av.putalpha(mk.resize((2 * rr, 2 * rr), Image.LANCZOS)); av.save(f"{ROOT}/public/img/fredrick.png")
+
 # 2. Captions: 4-8 word phrases per sentence, boundaries preferring punctuation
 WEAK = {"a","an","the","of","to","and","or","for","in","with","about","our","is","are","we","just","from","by","that","where","you","your","but","at","on","as","can","into"}
 def split(words):
