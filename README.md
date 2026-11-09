@@ -9,7 +9,7 @@ A 90-second, faceless chapter introduction video for **PyLadiesCon 2026**, built
 
 ## Status
 
-- [ ] TTS per-scene timing pass
+- [x] TTS per-scene timing pass (`scripts/tts.py`, results in `config/timings.json`)
 - [ ] Scenes built (S1 to S6)
 - [ ] Subtitles burned in and exported
 - [ ] Music mixed and ducked (optional)
@@ -35,28 +35,25 @@ Durations live in `scenes.config.ts`. Each scene is its narration length plus ab
 
 Requirements: Node 20+, Python 3, `ffmpeg` and `ffprobe`, `edge-tts` (`pip install edge-tts`).
 
-```bash
-npm install
-```
-
-The cloud environment must be able to reach `speech.platform.bing.com`, or voice generation fails.
+There is no `package.json` yet: the Remotion project has not been scaffolded. Scripts will be listed here once they exist in `package.json`.
 
 ## Build pipeline
 
-> Script names below must match `package.json`. If they don't, fix this section.
+Currently working:
 
 ```bash
-npm run tts        # generate per-scene narration, measure clips with ffprobe
-npm run preview    # open the Remotion studio
-npm run render     # render the final MP4
-npm run verify     # fail unless the MP4 is 90.0s (+/-0.05s)
+python3 scripts/tts.py   # per-scene narration -> public/audio/S1..S6.mp3 (+ word timings), config/timings.json
 ```
+
+The voice is fixed to `en-NG-EzinneNeural` (`config/narration.json`); the script refuses any other voice. The environment must be able to reach `speech.platform.bing.com`. `edge-tts` 7.x pins certifi's CA bundle, so behind a TLS-inspecting proxy `scripts/tts.py` uses the bundle in `SSL_CERT_FILE` when it is set (certificate verification stays on).
+
+Not built yet: Remotion preview, render, and the 90.0s verify step.
 
 Order matters: run the TTS timing pass before touching visuals, so scene lengths come from real audio.
 
 ## Configuration
 
-Flags live in the config file, never in components. All default to `false`.
+Flags live in `config/flags.json`, never in components. All default to `false`. Narration text is in `config/narration.json`.
 
 | Flag | Effect when `true` |
 |---|---|
@@ -71,9 +68,10 @@ Organizers are a data array (name, role, optional photo). Only Fredrick Ughimi i
 ```
 assets/
   logo/        pyladies-rivers.jpg
-  curriculum/  PyLadies_Rivers_Curriculum_Overhaul.md
+  curriculum/  PyLadies_Rivers_Curriculum.md
   photos/      cleared pilot-cohort photos + CONSENT.md
-  music/       licensed track (optional)
+  music/       licensed track (optional; not present)
+  _do-not-use/ forbidden promo poster, kept out of the build
 ```
 
 Rules:

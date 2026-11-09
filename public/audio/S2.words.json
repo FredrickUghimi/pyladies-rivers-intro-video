@@ -1,0 +1,112 @@
+[
+ {
+  "text": "Our",
+  "start": 0.1,
+  "end": 0.3
+ },
+ {
+  "text": "mission",
+  "start": 0.3375,
+  "end": 0.7375
+ },
+ {
+  "text": "is",
+  "start": 0.75,
+  "end": 0.8375
+ },
+ {
+  "text": "simple",
+  "start": 0.8375,
+  "end": 1.2625
+ },
+ {
+  "text": "to",
+  "start": 1.6125,
+  "end": 1.725
+ },
+ {
+  "text": "encourage",
+  "start": 1.7625,
+  "end": 2.3625
+ },
+ {
+  "text": "support",
+  "start": 2.7,
+  "end": 3.15
+ },
+ {
+  "text": "and",
+  "start": 3.2,
+  "end": 3.3375
+ },
+ {
+  "text": "empower",
+  "start": 3.35,
+  "end": 3.7875
+ },
+ {
+  "text": "women",
+  "start": 3.8375,
+  "end": 4.15
+ },
+ {
+  "text": "to",
+  "start": 4.1875,
+  "end": 4.275
+ },
+ {
+  "text": "explore",
+  "start": 4.3,
+  "end": 4.7125
+ },
+ {
+  "text": "programming",
+  "start": 4.7875,
+  "end": 5.375
+ },
+ {
+  "text": "develop",
+  "start": 5.775,
+  "end": 6.0875
+ },
+ {
+  "text": "practical",
+  "start": 6.1875,
+  "end": 6.65
+ },
+ {
+  "text": "Python",
+  "start": 6.725,
+  "end": 7.1
+ },
+ {
+  "text": "skills",
+  "start": 7.1375,
+  "end": 7.6125
+ },
+ {
+  "text": "and",
+  "start": 8.0125,
+  "end": 8.15
+ },
+ {
+  "text": "build",
+  "start": 8.225,
+  "end": 8.4625
+ },
+ {
+  "text": "confidence",
+  "start": 8.525,
+  "end": 9.1375
+ },
+ {
+  "text": "in",
+  "start": 9.1875,
+  "end": 9.3125
+ },
+ {
+  "text": "technology",
+  "start": 9.35,
+  "end": 9.9
+ }
+]
