@@ -10,10 +10,11 @@ A 90-second, faceless chapter introduction video for **PyLadiesCon 2026**, built
 ## Status
 
 - [x] TTS per-scene timing pass (`scripts/tts.py`, results in `config/timings.json`)
-- [ ] Scenes built (S1 to S6)
-- [ ] Subtitles burned in and exported
-- [ ] Verification checklist passed
-- [ ] Final MP4 rendered
+- [x] Scenes built (S1 to S6)
+- [x] Subtitles burned in and exported (`deliverables/PyLadies-Rivers-Intro.srt`)
+- [x] Low-res 90s preview rendered, verification 11/11 on the preview
+- [ ] Verification checklist passed on the final MP4
+- [ ] Final MP4 rendered (waiting for approval of the preview)
 
 Update this list as work lands. Do not tick a box that isn't true.
 
@@ -32,23 +33,29 @@ Durations live in `scenes.config.ts`. Each scene is its narration length plus ab
 
 ## Setup
 
-Requirements: Node 20+, Python 3, `ffmpeg` and `ffprobe`, `edge-tts` (`pip install edge-tts`).
+Requirements: Node 20+, Python 3 with `edge-tts` and `Pillow` and `numpy`, `ffmpeg` and `ffprobe`, Chromium (the render scripts use `/opt/pw-browsers/chromium`; change `--browser-executable` in `package.json` elsewhere). The scenes use the system fonts Inter and DejaVu Sans Mono.
 
-There is no `package.json` yet: the Remotion project has not been scaffolded. Scripts will be listed here once they exist in `package.json`.
+```bash
+npm install
+```
 
 ## Build pipeline
 
-Currently working:
+All scripts are in `package.json`:
 
 ```bash
-python3 scripts/tts.py   # per-scene narration -> public/audio/S1..S6.mp3 (+ word timings), config/timings.json
+npm run tts              # per-scene narration (one clip per sentence, 0.3s pauses, word timings) -> public/audio, config/timings.json
+npm run prep             # crop logo, build captions + .srt, assemble the 90.0s voiceover (also run by the render scripts)
+npm run preview          # Remotion studio
+npm run render:preview   # 960x540 full 90s preview -> deliverables/preview-lowres.mp4
+npm run render           # 1920x1080 final -> deliverables/PyLadies-Rivers-Intro.mp4
+npm run verify:preview   # checklist against the preview (exit 1 on any failure)
+npm run verify           # checklist against the final MP4 (exit 1 on any failure; duration must be 90.0s +/-0.05s)
 ```
 
-The voice is fixed to `en-NG-EzinneNeural` (`config/narration.json`); the script refuses any other voice. The environment must be able to reach `speech.platform.bing.com`. `edge-tts` 7.x pins certifi's CA bundle, so behind a TLS-inspecting proxy `scripts/tts.py` uses the bundle in `SSL_CERT_FILE` when it is set (certificate verification stays on).
+The voice is fixed to `en-NG-EzinneNeural` (`config/narration.json`), rate +0%, no pitch change, no time-stretching. The environment must be able to reach `speech.platform.bing.com`. `edge-tts` 7.x pins certifi's CA bundle, so behind a TLS-inspecting proxy `scripts/tts.py` uses the bundle in `SSL_CERT_FILE` when it is set (verification stays on).
 
-Not built yet: Remotion preview, render, and the 90.0s verify step.
-
-Order matters: run the TTS timing pass before touching visuals, so scene lengths come from real audio.
+Order matters: run the TTS timing pass before touching visuals, so scene lengths come from real audio. Scene slots live in `scenes.config.ts`; the render throws if a narration clip does not fit its slot.
 
 ## Configuration
 
@@ -96,7 +103,7 @@ Rules:
 - [ ] URL is `https://pyladies-rivers.github.io/website/`; dates are 12-13 February 2027
 - [ ] S5 text matches the flag states
 - [ ] No forbidden assets used
-- [ ] Narration is clearly audible; captions match the narration text
+- [ ] Narration is clearly audible; captions match the narration text; S4 code is verbatim from the curriculum
 
 ## Licensing notes
 

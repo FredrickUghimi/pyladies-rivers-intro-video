@@ -1,0 +1,27 @@
+{
+  "name": "pyladies-rivers-intro-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "90-second PyLadies Rivers chapter intro (Remotion)",
+  "scripts": {
+    "tts": "python3 scripts/tts.py",
+    "prep": "python3 scripts/prep.py",
+    "preview": "remotion studio src/index.ts",
+    "render:preview": "npm run prep && remotion render src/index.ts Intro deliverables/.raw-preview.mp4 --scale=0.5 --crf=30 --browser-executable=/opt/pw-browsers/chromium && npm run trim -- deliverables/.raw-preview.mp4 deliverables/preview-lowres.mp4",
+    "render": "npm run prep && remotion render src/index.ts Intro deliverables/.raw-final.mp4 --crf=18 --browser-executable=/opt/pw-browsers/chromium && npm run trim -- deliverables/.raw-final.mp4 deliverables/PyLadies-Rivers-Intro.mp4",
+    "verify": "python3 scripts/verify.py",
+    "trim": "bash scripts/trim.sh",
+    "verify:preview": "python3 scripts/verify.py --preview"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.290",
+    "@remotion/layout-utils": "4.0.290",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.290"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}

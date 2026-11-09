@@ -1,0 +1,112 @@
+1
+00:00:00,900 --> 00:00:04,213
+From Port Harcourt, Rivers State, Nigeria,
+
+2
+00:00:04,213 --> 00:00:06,475
+comes a community passionate about opening
+
+3
+00:00:06,475 --> 00:00:08,412
+doors for women in technology.
+
+4
+00:00:09,408 --> 00:00:11,333
+We are PyLadies Rivers.
+
+5
+00:00:13,600 --> 00:00:16,200
+Our mission is simple: to encourage,
+
+6
+00:00:16,200 --> 00:00:19,275
+support and empower women to explore programming,
+
+7
+00:00:19,275 --> 00:00:21,512
+develop practical Python skills,
+
+8
+00:00:21,512 --> 00:00:23,750
+and build confidence in technology.
+
+9
+00:00:27,600 --> 00:00:30,175
+Led by our chapter organizer and mentor,
+
+10
+00:00:30,175 --> 00:00:32,987
+Fredrick Ughimi, PyLadies Rivers is building
+
+11
+00:00:32,987 --> 00:00:36,000
+a welcoming environment where learners can grow together,
+
+12
+00:00:36,000 --> 00:00:38,050
+share knowledge and support one another.
+
+13
+00:00:40,600 --> 00:00:43,350
+Through our structured Python mentorship programme,
+
+14
+00:00:43,350 --> 00:00:45,150
+we guide learners from the fundamentals
+
+15
+00:00:45,150 --> 00:00:48,337
+of programming to practical exercises and assignments.
+
+16
+00:00:49,324 --> 00:00:51,062
+We make learning accessible,
+
+17
+00:00:51,062 --> 00:00:54,449
+interactive and supportive, especially for beginners.
+
+18
+00:00:57,100 --> 00:00:59,212
+We are growing beyond online learning,
+
+19
+00:00:59,212 --> 00:01:02,750
+with hands-on experiences and stronger community connections.
+
+20
+00:01:03,712 --> 00:01:05,475
+We are excited about our upcoming
+
+21
+00:01:05,475 --> 00:01:08,212
+in-person Python workshop in Port Harcourt,
+
+22
+00:01:08,212 --> 00:01:10,462
+planned for February 2027.
+
+23
+00:01:14,100 --> 00:01:15,400
+Whether you are just starting
+
+24
+00:01:15,400 --> 00:01:16,925
+or growing your skills,
+
+25
+00:01:16,925 --> 00:01:18,500
+there is a place for you here.
+
+26
+00:01:19,488 --> 00:01:21,438
+One line of Python at a time,
+
+27
+00:01:21,438 --> 00:01:24,363
+we are creating opportunities for women in technology.
+
+28
+00:01:25,356 --> 00:01:27,281
+We are PyLadies Rivers!
+
