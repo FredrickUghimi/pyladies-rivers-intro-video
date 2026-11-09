@@ -1,0 +1,5 @@
+file '/home/user/pyladies-rivers-intro-video/public/audio/parts/S6_0.wav'
+file '/home/user/pyladies-rivers-intro-video/public/audio/parts/sil.wav'
+file '/home/user/pyladies-rivers-intro-video/public/audio/parts/S6_1.wav'
+file '/home/user/pyladies-rivers-intro-video/public/audio/parts/sil.wav'
+file '/home/user/pyladies-rivers-intro-video/public/audio/parts/S6_2.wav'

@@ -2,146 +2,175 @@
  {
   "text": "Through",
   "start": 0.1,
-  "end": 0.3375
+  "end": 0.3375,
+  "sentence": 0
  },
  {
   "text": "our",
   "start": 0.35,
-  "end": 0.5
+  "end": 0.5,
+  "sentence": 0
  },
  {
   "text": "structured",
   "start": 0.55,
-  "end": 1.05
+  "end": 1.05,
+  "sentence": 0
  },
  {
   "text": "Python",
   "start": 1.125,
-  "end": 1.475
+  "end": 1.475,
+  "sentence": 0
  },
  {
   "text": "mentorship",
   "start": 1.525,
-  "end": 1.9875
+  "end": 1.9875,
+  "sentence": 0
  },
  {
-  "text": "programme",
+  "text": "programme,",
   "start": 2.1,
-  "end": 2.55
+  "end": 2.55,
+  "sentence": 0
  },
  {
   "text": "we",
   "start": 2.85,
-  "end": 2.925
+  "end": 2.925,
+  "sentence": 0
  },
  {
   "text": "guide",
   "start": 3.0,
-  "end": 3.175
+  "end": 3.175,
+  "sentence": 0
  },
  {
   "text": "learners",
   "start": 3.2,
-  "end": 3.5625
+  "end": 3.5625,
+  "sentence": 0
  },
  {
   "text": "from",
   "start": 3.5875,
-  "end": 3.7125
+  "end": 3.7125,
+  "sentence": 0
  },
  {
   "text": "the",
   "start": 3.775,
-  "end": 3.85
+  "end": 3.85,
+  "sentence": 0
  },
  {
   "text": "fundamentals",
   "start": 3.8625,
-  "end": 4.6
+  "end": 4.6,
+  "sentence": 0
  },
  {
   "text": "of",
   "start": 4.65,
-  "end": 4.775
+  "end": 4.775,
+  "sentence": 0
  },
  {
   "text": "programming",
   "start": 4.85,
-  "end": 5.3
+  "end": 5.3,
+  "sentence": 0
  },
  {
   "text": "to",
   "start": 5.3625,
-  "end": 5.4375
+  "end": 5.4375,
+  "sentence": 0
  },
  {
   "text": "practical",
   "start": 5.525,
-  "end": 5.95
+  "end": 5.95,
+  "sentence": 0
  },
  {
   "text": "exercises",
   "start": 6.0,
-  "end": 6.675
+  "end": 6.675,
+  "sentence": 0
  },
  {
   "text": "and",
   "start": 6.675,
-  "end": 6.8125
+  "end": 6.8125,
+  "sentence": 0
  },
  {
-  "text": "assignments",
+  "text": "assignments.",
   "start": 6.8125,
-  "end": 7.4875
+  "end": 7.4875,
+  "sentence": 0
  },
  {
   "text": "We",
-  "start": 8.4125,
-  "end": 8.5625
+  "start": 8.824,
+  "end": 8.974,
+  "sentence": 1
  },
  {
   "text": "make",
-  "start": 8.6,
-  "end": 8.8125
+  "start": 9.0115,
+  "end": 9.224,
+  "sentence": 1
  },
  {
   "text": "learning",
-  "start": 8.85,
-  "end": 9.175
+  "start": 9.2615,
+  "end": 9.5865,
+  "sentence": 1
  },
  {
-  "text": "accessible",
-  "start": 9.2125,
-  "end": 9.85
+  "text": "accessible,",
+  "start": 9.624,
+  "end": 10.2615,
+  "sentence": 1
  },
  {
   "text": "interactive",
-  "start": 10.15,
-  "end": 10.875
+  "start": 10.5615,
+  "end": 11.2865,
+  "sentence": 1
  },
  {
   "text": "and",
-  "start": 10.9375,
-  "end": 11.0375
+  "start": 11.349,
+  "end": 11.449,
+  "sentence": 1
  },
  {
-  "text": "supportive",
-  "start": 11.075,
-  "end": 11.7375
+  "text": "supportive,",
+  "start": 11.4865,
+  "end": 12.149,
+  "sentence": 1
  },
  {
   "text": "especially",
-  "start": 11.8625,
-  "end": 12.4125
+  "start": 12.274,
+  "end": 12.824,
+  "sentence": 1
  },
  {
   "text": "for",
-  "start": 12.425,
-  "end": 12.5625
+  "start": 12.8365,
+  "end": 12.974,
+  "sentence": 1
  },
  {
-  "text": "beginners",
-  "start": 12.625,
-  "end": 13.1875
+  "text": "beginners.",
+  "start": 13.0365,
+  "end": 13.599,
+  "sentence": 1
  }
 ]

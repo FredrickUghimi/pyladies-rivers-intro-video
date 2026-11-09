@@ -4,15 +4,14 @@ A 90-second, faceless chapter introduction video for **PyLadiesCon 2026**, built
 
 - Format: 1920x1080, 16:9, 30 fps, exactly 90.0 seconds
 - Stack: React + Remotion
-- Narration: Microsoft neural voice `en-NG-EzinneNeural` via `edge-tts`
-- Output: MP4, voice-over audio, mixed audio, `.srt` subtitles
+- Narration: Microsoft neural voice `en-NG-EzinneNeural` via `edge-tts` (rate +0%, no pitch change, no time-stretching), 0.3s silence between sentences, word-level timings
+- Output: MP4, voice-over audio, `.srt` subtitles (also burned in, current word highlighted)
 
 ## Status
 
 - [x] TTS per-scene timing pass (`scripts/tts.py`, results in `config/timings.json`)
 - [ ] Scenes built (S1 to S6)
 - [ ] Subtitles burned in and exported
-- [ ] Music mixed and ducked (optional)
 - [ ] Verification checklist passed
 - [ ] Final MP4 rendered
 
@@ -70,7 +69,6 @@ assets/
   logo/        pyladies-rivers.jpg
   curriculum/  PyLadies_Rivers_Curriculum.md
   photos/      cleared pilot-cohort photos + CONSENT.md
-  music/       licensed track (optional; not present)
   _do-not-use/ forbidden promo poster, kept out of the build
 ```
 
@@ -80,12 +78,8 @@ Rules:
 - **One brand identity only.** Promo flyers, posters, and anything with a TikTok watermark or creator handle are not used.
 - **Photos:** only those marked "cleared" in `assets/photos/CONSENT.md`. Captioned "Our pilot cohort". No stock footage and no AI-generated imagery presented as real people.
 - **Code demos in S4** come from the 8-week curriculum, not invented examples.
-- **Music:** licensed tracks only, with the licence noted below. No licensed track means narration only.
+- **No music.** The video is narration only.
 
-### Music licence
-
-Track: _not yet added_
-Source and licence: _fill in when added_
 
 ## Accuracy rules
 
@@ -102,7 +96,7 @@ Source and licence: _fill in when added_
 - [ ] URL is `https://pyladies-rivers.github.io/website/`; dates are 12-13 February 2027
 - [ ] S5 text matches the flag states
 - [ ] No forbidden assets used
-- [ ] Music (if present) is ducked and narration is clearly audible
+- [ ] Narration is clearly audible; captions match the narration text
 
 ## Licensing notes
 

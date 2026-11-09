@@ -2,141 +2,175 @@
  {
   "text": "We",
   "start": 0.1,
-  "end": 0.2125
+  "end": 0.2125,
+  "sentence": 0
  },
  {
   "text": "are",
   "start": 0.225,
-  "end": 0.325
+  "end": 0.325,
+  "sentence": 0
  },
  {
   "text": "growing",
   "start": 0.4,
-  "end": 0.7125
+  "end": 0.7125,
+  "sentence": 0
  },
  {
   "text": "beyond",
   "start": 0.7625,
-  "end": 1.0625
+  "end": 1.0625,
+  "sentence": 0
  },
  {
   "text": "online",
   "start": 1.125,
-  "end": 1.45
+  "end": 1.45,
+  "sentence": 0
  },
  {
-  "text": "learning",
+  "text": "learning,",
   "start": 1.5125,
-  "end": 1.9125
+  "end": 1.9125,
+  "sentence": 0
  },
  {
   "text": "with",
   "start": 2.2125,
-  "end": 2.375
+  "end": 2.375,
+  "sentence": 0
  },
  {
   "text": "hands-on",
   "start": 2.3875,
-  "end": 2.8375
+  "end": 2.8375,
+  "sentence": 0
  },
  {
   "text": "experiences",
   "start": 2.8375,
-  "end": 3.6125
+  "end": 3.6125,
+  "sentence": 0
  },
  {
   "text": "and",
   "start": 3.6375,
-  "end": 3.75
+  "end": 3.75,
+  "sentence": 0
  },
  {
   "text": "stronger",
   "start": 3.7625,
-  "end": 4.1625
+  "end": 4.1625,
+  "sentence": 0
  },
  {
   "text": "community",
   "start": 4.225,
-  "end": 4.625
+  "end": 4.625,
+  "sentence": 0
  },
  {
-  "text": "connections",
+  "text": "connections.",
   "start": 4.7,
-  "end": 5.4
+  "end": 5.4,
+  "sentence": 0
  },
  {
   "text": "We",
-  "start": 6.3125,
-  "end": 6.45
+  "start": 6.712,
+  "end": 6.8495,
+  "sentence": 1
  },
  {
   "text": "are",
-  "start": 6.4625,
-  "end": 6.55
+  "start": 6.862,
+  "end": 6.9495,
+  "sentence": 1
  },
  {
   "text": "excited",
-  "start": 6.5625,
-  "end": 7.05
+  "start": 6.962,
+  "end": 7.4495,
+  "sentence": 1
  },
  {
   "text": "about",
-  "start": 7.0625,
-  "end": 7.4125
+  "start": 7.462,
+  "end": 7.812,
+  "sentence": 1
  },
  {
   "text": "our",
-  "start": 7.425,
-  "end": 7.55
+  "start": 7.8245,
+  "end": 7.9495,
+  "sentence": 1
  },
  {
   "text": "upcoming",
-  "start": 7.6125,
-  "end": 8.075
+  "start": 8.012,
+  "end": 8.4745,
+  "sentence": 1
  },
  {
   "text": "in-person",
-  "start": 8.075,
-  "end": 8.4875
+  "start": 8.4745,
+  "end": 8.887,
+  "sentence": 1
  },
  {
   "text": "Python",
-  "start": 8.55,
-  "end": 8.9
+  "start": 8.9495,
+  "end": 9.2995,
+  "sentence": 1
  },
  {
   "text": "workshop",
-  "start": 8.9875,
-  "end": 9.4125
+  "start": 9.387,
+  "end": 9.812,
+  "sentence": 1
  },
  {
   "text": "in",
-  "start": 9.475,
-  "end": 9.6125
+  "start": 9.8745,
+  "end": 10.012,
+  "sentence": 1
  },
  {
   "text": "Port",
-  "start": 9.6625,
-  "end": 9.875
+  "start": 10.062,
+  "end": 10.2745,
+  "sentence": 1
  },
  {
-  "text": "Harcourt",
-  "start": 9.9,
-  "end": 10.325
+  "text": "Harcourt,",
+  "start": 10.2995,
+  "end": 10.7245,
+  "sentence": 1
  },
  {
   "text": "planned",
-  "start": 10.8125,
-  "end": 11.05
+  "start": 11.212,
+  "end": 11.4495,
+  "sentence": 1
  },
  {
   "text": "for",
-  "start": 11.075,
-  "end": 11.2125
+  "start": 11.4745,
+  "end": 11.612,
+  "sentence": 1
  },
  {
-  "text": "February 2027",
-  "start": 11.2375,
-  "end": 12.7125
+  "text": "February",
+  "start": 11.637,
+  "end": 12.6203,
+  "sentence": 1
+ },
+ {
+  "text": "2027.",
+  "start": 12.6203,
+  "end": 13.112,
+  "sentence": 1
  }
 ]
